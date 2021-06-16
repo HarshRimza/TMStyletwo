@@ -1,0 +1,18 @@
+<table border='1' class='mainLayout'>
+<tr>
+<td class='logo'><a href='/styletwo'><img src='/styletwo/images/header_logo.png' class='rounded float-left'></a></td>
+<td class='companyTitle'>ABCD Corporation</td>
+</tr>
+
+<tr>
+<td class='navigation'>
+<br><a href='/styletwo/Students.jsp'>Students</a>
+</td>
+<td>
+<h1>School Administration System</h1>
+
+</td>
+</tr>
+</td>
+</tr>
+</table>

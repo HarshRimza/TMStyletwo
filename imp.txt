@@ -1,0 +1,283 @@
+
+<div class="alert alert-danger" role="alert">
+<button class="close" type="button" data-dismiss="alert" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+<strong>Oh !</strong> This mobile number is not registered
+</div>
+
+
+
+
+<!-- function selectRow(r,i)
+{
+if(r==viewModel.selectedRow) return;
+if(viewModel.selectedRow!=null)
+{
+viewModel.selectedRow.style.background='#FFFFFF';
+viewModel.selectedRow.style.color='#000000';
+}
+viewModel.selectedRow=r;
+viewModel.selectedIndex=i;
+r.style.background='#000000';
+r.style.color='#FFFFFF';
+} -->
+
+<!-- selectRow(row,i); -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id='studentViewDetailDivision' style='display:none;'>
+<form id='studentViewDetailForm'>
+<table border='1' id='studentViewDetailGrid'>
+<tr>
+<td>Enter your roll number : </td>
+<td><input type='text' id='rollNumber' name='rollNumber' maxlength='33' size='33'></td>
+</tr>
+<tr>
+<td>Enter your name : </td>
+<td><input type='text' id='name' name='name' maxlength='33' size='33'></td>
+</tr>
+<tr>
+<td colspan='2'>Address : </td>
+</tr>
+<tr>
+<td colspan='2'><textarea rows='10' cols='50' id='address' name='address'></textarea></td>
+</tr>
+<tr>
+<td>City : </td>
+<td><input type='text' id='viewDetailCityCode' name='cityCode' maxlength='33' size='33'></td>
+</tr>
+<tr>
+<td>Gender : </td>
+<td><input type='radio' value='M' id='male' name='gender'>Male&nbsp;&nbsp;&nbsp&nbsp&nbsp<input type='radio' id='female' name='gender' value='F'>Female&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='gdrErrorSection'></span>
+</td>
+</tr>
+<tr>
+<td>Indian : </td>
+<td><input type='checkbox' id='indian' name='indian' value='true'></td>
+</tr>
+<tr>
+<tr>
+<td>Enter your date of birth : </td>
+<td><input type='text' id='dateOfBirth' name='dateOfBirth' placeholder='yyyy-mm-dd' maxlength='33' size='33'></td>
+</tr>
+<td colspan='2' align='center'><button type='button' onclick=showViewContainer('studentViewDetailDivision','studentViewDetailForm')>Back</button></td>
+</tr>
+</table>
+</form>
+</div>
+
+<div id='studentDeleteFormDivision' style='display:none;'>
+<form id='studentDeleteForm' action='/styletwo/DeleteStudent.jsp' method='post' onsubmit="return validateForm(this,'deleteCityErrorSection','deleteGenderErrorSection')">
+<table border='1' id='studentDeleteGrid' >
+<tr>
+<td>Enter your roll number : </td>
+<td><input type='text' id='rollNumber' name='rollNumber' maxlength='33' size='33'></td>
+</tr>
+<tr>
+<td>Enter your name : </td>
+<td><input type='text' id='name' name='name' maxlength='33' size='33'></td>
+</tr>
+<tr>
+<td colspan='2'>Address : </td>
+</tr>
+<tr>
+<td colspan='2'><textarea rows='10' cols='50' id='address' name='address'></textarea></td>
+</tr>
+<tr>
+<td>City : </td>
+<td><input type='text' id='deleteFormCityCode' name='cityCode' maxlength='33' size='33'>
+<span id='deleteCityErrorSection' ></span>
+</td>
+</tr>
+<tr>
+<td>Gender : </td>
+<td><input type='radio' value='M' id='male' name='gender'>Male&nbsp;&nbsp;&nbsp&nbsp&nbsp<input type='radio' id='female' name='gender' value='F'>Female&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='deleteGenderErrorSection'></span>
+</td>
+</tr>
+<tr>
+<td>Indian : </td>
+<td><input type='checkbox' id='indian' name='indian' value='Y'></td>
+</tr>
+<tr>
+<tr>
+<td>Enter your date of birth : </td>
+<td><input type='text' id='dateOfBirth' name='dateOfBirth' placeholder='yyyy-mm-dd'  maxlength='33' size='33'></td>
+</tr>
+<td align='center'><button type='submit'>Delete</button></td>
+<td align='center'><button type='button' onclick=showViewContainer('studentDeleteFormDivision','studentDeleteForm')>Cancel</button></td>
+</tr>
+</table>
+</form>
+</div>
+
+<div id='studentEditFormDivision' style='display:none;'>
+<form id='studentEditForm' action='/styletwo/EditStudent.jsp' method='post' onsubmit="return validateForm(this,'editCityErrorSection','editGenderErrorSection')">
+<table border='1' id='studentEditGrid' >
+<tr>
+<td>Enter your roll number : </td>
+<td><input type='text' id='rollNumber' name='rollNumber'  maxlength='33' size='33'></td>
+</tr>
+<tr>
+<td>Enter your name : </td>
+<td><input type='text' id='name' name='name'  maxlength='33' size='33'></td>
+</tr>
+<tr>
+<td colspan='2'>Address : </td>
+</tr>
+<tr>
+<td colspan='2'><textarea rows='10' cols='50' id='address' name='address' ></textarea></td>
+</tr>
+<tr>
+<td>City : </td>
+<td><select id='editFormCityCode' name='cityCode'>
+<option value='-1'>&lt;Select City&gt;</option>
+</select>
+<span id='editCityErrorSection'></span>
+</td>
+</tr>
+<tr>
+<td>Gender : </td>
+<td><input type='radio' value='M' id='male' name='gender'>Male&nbsp;&nbsp;&nbsp&nbsp&nbsp<input type='radio' id='female' name='gender' value='F'>Female&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='editGenderErrorSection'></span>
+</td>
+</tr>
+<tr>
+<td>Indian : </td>
+<td><input type='checkbox' id='indian' name='indian' value='true' ></td>
+</tr>
+<tr>
+<tr>
+<td>Enter your date of birth : </td>
+<td><input type='text' id='dateOfBirth' name='dateOfBirth' placeholder='yyyy-mm-dd' maxlength='33' size='33'></td>
+</tr>
+<td align='center'><button type='submit'>Update</button></td>
+<td align='center'><button type='button' onclick=showViewContainer('studentEditFormDivision','studentEditForm')>Cancel</button></td>
+</tr>
+</table>
+</form>
+</div>
+
+
+
+
+<div id='studentAddFormDivision' style='display:none;'>
+<form id='studentAddForm' action='/styletwo/AddStudent.jsp'  method='post' onsubmit='return validateForm(this,"addCityErrorSection","addGenderErrorSection")'>
+<table border='1' id='studentAddGrid' >
+<tr>
+<td>Enter your roll number : </td>
+<td><input type='text' id='rollNumber' name='rollNumber'  maxlength='33' size='33'></td>
+</tr>
+<tr>
+<td>Enter your name : </td>
+<td><input type='text' id='name' name='name'  maxlength='33' size='33'></td>
+</tr>
+<tr>
+<td colspan='2'>Address : </td>
+</tr>
+<tr>
+<td colspan='2'><textarea rows='10' cols='50'  id='address' name='address'></textarea></td>
+</tr>
+<tr>
+<td>City : </td>
+<td><select id='addFormCityCode'  name='cityCode'>
+<option value='-1'>&lt;Select City&gt;</option>
+</select>
+<span id='addCityErrorSection' ></span>
+</td>
+</tr>
+<tr>
+<td>Gender : </td>
+<td><input type='radio' id='male'  checked name='gender' value='M'>Male&nbsp;&nbsp;&nbsp&nbsp&nbsp<input type='radio' id='female' name='gender' value='F'>Female&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='addGenderErrorSection' ></span>
+</td>
+</tr>
+<tr>
+<td>Indian : </td>
+<td><input type='checkbox' id='indian' name='indian' value='true'></td>
+</tr>
+<tr>
+<tr>
+<td>Enter your date of birth : </td>
+<td><input type='text' id='dateOfBirth' name='dateOfBirth'  placeholder='yyyy-mm-dd'  maxlength='33' size='33'></td>
+</tr>
+<td align='center'><button type='submit'>Save</button></td>
+<td align='center'><button type='button' onclick=showViewContainer('studentAddFormDivision','studentAddForm')>Cancel</button></td>
+</tr>
+</table>
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var minus=0;
+for(i=0;i<dateOfBirth.length;i++)
+{
+if(dateOfBirth.charAt(i)=='-')
+{
+minus=minus+1;
+}
+}
+if(minus!=2)
+{
+alert('Invalid date of birth');
+frm.dateOfBirth.focus();
+return false;
+}
+minus=0;
+if(dateOfBirth.charAt(4)=='-')
+{
+minus=minus+1;
+if(dateOfBirth.charAt(6)=='-')
+{
+minus=minus+1;
+}
+if(dateOfBirth.charAt(7)=='-')
+{
+minus=minus+1;
+}
+}
+else
+{
+alert('Invalid date of birth');
+frm.dateOfBirth.focus();
+return false;
+}
+if(minus!=2)
+{
+alert('Invalid date of birth');
+frm.dateOfBirth.focus();
+return false;
+}

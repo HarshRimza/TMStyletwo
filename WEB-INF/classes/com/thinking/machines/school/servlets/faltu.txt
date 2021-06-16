@@ -1,0 +1,22 @@
+ResultSet resultSet=statement.executeQuery(select * from student where roll_number="+roll_number);
+if(resultSet.next()==false)
+{
+resultSet.close();
+statement.close();
+connection.close();
+//message wali line
+throw new DAOException("Student : "+rollNumber+" doesn't exists.");
+}
+resultSet.close();
+resultSet=statement.executeQuery("select * from student where name="+name+" and roll_number<>"+roll_number);
+if(resultSet.next()==true)
+{
+resultSet.close();
+statement.close();
+connection.close();
+//message wali line
+throw new DAOException("Student : "+name+" exists.");
+}
+statement.executeUpdate("update student set name='"+name+"',address='"+address+"',gender='"+gender+"',city_code="+city_code+",indian="+indian+",date_of_birth='"+date_of_birth+"' where roll_number="+roll_number);
+statement.close();
+connection.close();
