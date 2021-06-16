@@ -1,0 +1,55 @@
+.mainLayout
+{
+width:100%;
+}
+
+.logo
+{
+width:80px;
+padding:5px;
+text-align: center;
+}
+
+.companyTitle
+{
+padding:5px;
+color:#cc3300;
+font-size:16pt;
+font-weight:bold;
+}
+
+.navigation
+{
+margin-top:10px;
+padding:5px;
+}
+
+h1 
+{
+font-family: Verdana;
+font-size: 24pt;
+font-weight: bold;
+}
+
+.studentViewContainer
+{
+height:300px;
+overflow:scroll;
+}
+
+.studentViewGrid
+{
+display:block;
+}
+
+.selectedRow
+{
+background='#000000';
+color='#FFFFFF';
+}
+
+.notSelectedRow
+{
+background='#FFFFFF';
+color='#000000';
+}
