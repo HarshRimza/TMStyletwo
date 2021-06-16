@@ -1,0 +1,12 @@
+insert into student values(108,'Bulbul Chaudhari','56A, Kalyani Nagar,Sarojini Market',6,'F',false,'1996-12-30');
+insert into student values(101,'Krishna Sharma','56A, Kalyani Nagar,Sarojini Market',6,'M',true,'1996-12-30');
+insert into student values(102,'Akshay Kumar','56A, Kalyani Nagar,Sarojini Market',6,'M',false,'1996-12-30');
+insert into student values(104,'Salman Khan','56A, Kalyani Nagar,Sarojini Market',6,'M',false,'1996-12-30');
+insert into student values(105,'Yogesh Dewang','56A, Kalyani Nagar,Sarojini Market',6,'M',true,'1996-12-30');
+insert into student values(107,'Bhagyashree Dewang','56A, Kalyani Nagar,Sarojini Market',6,'F',true,'1996-12-30');
+insert into student values(103,'Harsh Rimza','56A, Kalyani Nagar,Sarojini Market',6,'M',true,'1996-12-30');
+insert into student values(109,'Divya Rimza','56A, Kalyani Nagar,Sarojini Market',6,'F',true,'1996-12-30');
+insert into student values(110,'Tripti Rimza','56A, Kalyani Nagar,Sarojini Market',6,'F',true,'1996-12-30');
+insert into student values(111,'Rani Rimza','56A, Kalyani Nagar,Sarojini Market',6,'F',true,'1996-12-30');
+insert into student values(112,'Kanhaiyalal Rimza','56A, Kalyani Nagar,Sarojini Market',6,'M',true,'1996-12-30');
+insert into student values(113,'Dharmendra Nandwar','56A, Kalyani Nagar,Sarojini Market',6,'M',true,'1996-12-30');
