@@ -10,6 +10,8 @@ A User can add, update, delete and retrieve data of student.
 ### Student Home Page
 ![image](https://user-images.githubusercontent.com/60133190/126597670-ddb2652e-e05b-4abd-be32-cf293729c227.png)
 ### For Admin 
+#### Student Table
+![image](https://user-images.githubusercontent.com/60133190/126598631-cbf6d59e-b81c-43b9-970b-333768101cc0.png)
 #### View Detail 
 ![image](https://user-images.githubusercontent.com/60133190/126598366-5194b317-3fbf-4243-a79b-ece30d4dcbea.png)
 #### Add Student Form
